@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Arima+Madurai:wght@300&family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+body{
+   background-color:#010103; 
+    overflow-x: hidden;   
+}
+body a{
+    font-family: 'Arima Madurai', cursive;
+}
+body p{
+    font-family: 'Arima Madurai', cursive;
+}
+    /*---- HEADER--- */
+.header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color:#010103 ;
+    border-bottom:2px solid  rgba(255,255,255,.3);
+}
+.mainlogo{
+    width: 75px;
+}
+.mainlogo:hover{
+    animation: rotateIn 3s infinite alternate;
+}
+.header .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    width: 40vw;
+    height: 10vh;
+    
+}
+.header .navbar ul li a{
+    cursor: pointer;
+    color: white;
+    
+}
+.header .navbar ul li a:hover{
+    color:#d3ad7f;
+    transition: 0.5s;
+    
+}
+.navbar ul li:hover{
+    animation: pulse 0.3s infinite;
+}
+.mainform{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5vw;
+    transition: 0.3s;
+}
+.login{
+    color: white;
+    font-size: 20px;
+    margin-left: 5px;
+
+}
+.signin{
+    color: white;
+    font-size: 22px;
+    cursor:pointer;
+}
+.mainform:hover .signin{
+    color:#d3ad7f;
+    animation:fadeInLeft 0.5s;
+}
+.mainform:hover .login{
+    color:#d3ad7f;
+}
+.menuicon{
+    display:none;
+}
+.menuicon i{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.menuicon i:hover{
+    color:#d3ad7f ;
+}
+.menuicon:hover .mobilemenu{
+    right: 0px;
+}
+.mobilemenu{
+    position: absolute;
+    top:100%;
+    right: -100vw;
+    height: 85vh;
+    width: 100vw;
+    background-color: #010103 ;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    border-top: 2px solid;
+    border-image:  radial-gradient(rgb(255, 255, 255), rgba(54, 54, 54, 0.3)) 1;
+    
+    
+    
+}
+.mobileul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+
+}
+
+.mobileul > li:hover {
+    animation: pulse 0.3s infinite;
+}
+.mobilehref {
+    font-size: 22px;
+    color: white;
+    transition: 0.3s;
+}
+
+.mobilehref:hover{
+    color:#d3ad7f;
+    
+    
+}
+@media screen and (max-width:1100px){
+    .navbar ul li a {
+        font-size: 25px;
+        margin-left: 15px;
+    }
+    .mainlogo{
+        width: 80px;
+    }
+    .login{
+        font-size: 25px;
+    }
+    
+    
+    
+
+}
+
+
+@media screen and (max-width:800px) {
+    .navbar{
+        display: none;
+    }
+    .login{
+        display:none;
+    }
+    .menuicon{
+        display: block;
+    }
+    .mainform:hover .signin{
+        animation: none;
+    }
+
+
+}
+@media screen and (max-width:320px){
+    .mainlogo{
+        width: 65px;
+    }
+}
+/* ---HEADER END--- */
+
+
+/* MAIN VIDEO */
+.mainvideo{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.mainvideo video{
+     height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    position: absolute;
+
+}
+.maintext{
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    
+}
+.mainh1{
+    font-size: 100px;
+    color: #a76a20;
+    text-shadow: 9px -7px 12px black;
+    font-family: 'Aclonica', sans-serif;
+}
+.mainp{ 
+    font-size: 35px;
+    color: #a76a20;
+    text-shadow: 8px -5px 4px black;
+    font-family: 'Arima Madurai', cursive;
+}
+
+/* MAIN VIDEO END */
+
+/* MAIN FACTS */
+.factsheader{
+    
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    background:#593F32FF;
+    font-size: 25px;
+
+}
+.factsh1{
+    color:#E6C23EFF;
+    font-family: 'Aclonica', sans-serif;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.mainfactsp{
+    color:#D6CEC3FF;
+    font-family: 'Arima Madurai', cursive;
+    cursor: pointer;
+}
+
+.mainfacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #D6CEC3FF;
+}
+.factcontnet{
+    width: 70vw;
+    margin-top: 25px;
+}
+.fact{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.fact:hover{
+    background-color: #E6C23EFF;
+    transition: 0.4s;
+}
+.fact i{
+    font-size: 37px;
+    color: #593F32FF;
+}
+.factp{
+    line-height: 45px;
+    font-size: 20px;
+    font-family: 'Arima Madurai', cursive;
+    cursor: pointer;
+}
+@media screen and (max-width:1030px){
+    .mainh1{
+        font-size:60px;
+    }
+    .mainp{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .factcontnet{
+        width:98vw;
+    }
+    .mainh1{
+        font-size:37px;
+    }
+    .mainp{
+        font-size: 19px;
+    }
+    .factsh1{
+        font-size:30px;
+    }
+    .mainfactsp{
+        font-size: 19px;
+    }
+}
+
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    border-top: 1px solid #4e4e4f;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+    background: black;
+    
+}
+.fotercon{
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    
+}
+
+.fotercontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.foterlogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.suportdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.calldiv{
+    cursor:pointer;
+}
+.calldiv:hover{
+    animation: wobble 1s infinite alternate;
+
+}
+.sharediv a{
+    color: white;
+    font-size:25px;
+    margin-left:11px;
+}
+.footertwo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size:10px;
+    margin-right: 15px;
+    color:#d3ad7f;
+    background: black;
+    
+   
+    
+}
+@media screen and (max-width:800px){
+    .fotercontact{
+        display: none;
+    }
+    .suportdiv{
+        display: none;
+    }
+    .foterlogo{
+        width: 130px;
+    }
+    .footertwo{
+        font-size: 15px;
+    }
+}
+
